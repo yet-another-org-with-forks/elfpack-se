@@ -74,7 +74,7 @@ IMB:
 	NOP
 	NOP
 ;Do required caching stuff
-#ifndef K600_R2BB001 || W900_R5BC004
+#if !defined(K600_R2BB001) && !defined(W900_R5BC004)
 clean_loop:
 	MRC 	p15, 0, r15, c7, c10, 3 ; clean entire dcache using test and clean
 	NOP
